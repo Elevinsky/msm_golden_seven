@@ -27,5 +27,17 @@ Rails.application.routes.draw do
 
   get("/actors/delete_actor/:id", :controller => 'actors', :action => "destroy")
 
+  #movie routes
+
+  get("/movies/new_form", :controller => 'movies', :action => "new_form")
+  get("/create_movie", :controller => 'movies', :action => "create_row")
+
+  get("/movies", :controller => 'movies', :action => "index")
+  get("/movies/:id", :controller => 'movies', :action => "show")
+
+  get("/movies/:id/edit_form", :controller => 'movies', :action => "edit_form")
+  get("/update_movie/:id", :controller => 'movies', :action => "update_row")
+
+  get("/movies/delete_movie/:id", :controller => 'movies', :action => "destroy")
 
 end
