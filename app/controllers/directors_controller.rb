@@ -23,4 +23,10 @@ class DirectorsController < ApplicationController
 
     render("show")
   end
+
+  def destroy
+    @director = Director.find_by({ :id => params[:id] })
+
+    @director.destroy
+  end
 end
